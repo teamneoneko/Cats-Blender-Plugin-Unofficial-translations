@@ -8,7 +8,7 @@ See the plugin [here](https://github.com/Yusarina/Cats-Blender-Plugin-Unofficial
 
 #### How to provide translations?
 
-There are two typ of files for Cats there is the translations.csv is for the Cat's UI, then there is the dictionary.json which is cats internal dictionary which help translate shapekeys, bones and etc. 
+There are two type of files for Cats there is the translations.csv is for the Cat's UI, then there is the dictionary.json which is cats internal dictionary which help translate shapekeys, bones and etc. 
 
 If you want to contribrute fork the repo, make your edits then put in a pull request.
 

@@ -10,7 +10,7 @@ See the plugin [here](https://github.com/Yusarina/Cats-Blender-Plugin-Unofficial
 
 There are two type of files for Cats there is the translations.csv is for the Cat's UI, then there is the dictionary.json which is cats internal dictionary which help translate shapekeys, bones and etc. 
 
-If you want to contribrute fork the repo, make your edits then put in a pull request.
+If you want to contribrute fork the repo, make your edits then put in a pull request. Please note there are two different branches, [this](https://github.com/Yusarina/Cats-Blender-Plugin-Unofficial-translations/tree/3.6-4.0-translations) branch is for blender 3.6 and 4.0 and [this[(https://github.com/Yusarina/Cats-Blender-Plugin-Unofficial-translations/tree/4.1-translations) branch is for blender 4.1.
 
 In the future there will be an option in cats to download the latest translations on github.
 

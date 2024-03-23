@@ -1,6 +1,6 @@
 # Cats Blender Plugin Unofficial Translations.
 
-#### PLEASE DO NOT ASK FOR HELP FOR THIS VERSION OF CATS IN THE OFFICIAL CATS DISCORD, THIS CATS IS NOT OFFICIAL AND SUPPORT MAY NOT BE GIVEN IN THE OFFICIAL CATS DISCORD FOR THIS VERSION. THE OFFICIAL CATS DISCORD IS FOR THE OFFICIAL CATS ONLY, IF YOU HAVE A BUG OR NEED HELP PLEASE START AN [ISSUE](https://github.com/Yusarina/Cats-Blender-Plugin-Unofficial-/issues) OR JOIN MY OWN DISCORD SERVER.
+#### This branch is for Blender 3.6 and 4.0 Translations, As 4.1 cleans up alot of translations in cats please DO NOT use this branch for 4.1 translations. Please note if you make a pull for this branch I will also pull over to the 4.1 branch at a later date to ensure everything is the same.
 
 The non official version of Cats Blender Plugin which is maintained by Yusarina, Cats is an tool designed to shorten steps needed to import and optimize models into VRChat. Compatible models are: MMD, XNALara, Mixamo, Source Engine, Unreal Engine, DAZ/Poser, Blender Rigify, Sims 2, Motion Builder, 3DS Max and potentially more. This repo is for users to help provide translations for the plugin.
 

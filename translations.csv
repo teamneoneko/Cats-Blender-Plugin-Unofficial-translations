@@ -46,8 +46,8 @@ Blender 3.6 버전 이상을 사용하세요.
 "
 Main.error.40unsupportedVersion,"
 
-Blender 4.2+ is not supported by this version of cats.
-Please use Blender 4.1 you can download a 4.2 version on my github.
+Blender 4.0 is not supported by this version of cats.
+Please use Blender 3.6, you can download a 4.0 version on my github.
 ",,"
 
 이 버전의 고양이에서는 블렌더 4.0이 지원되지 않습니다..
@@ -65,7 +65,7 @@ ToolPanel.category,CATS,,
 QuickAccess.label,Quick Access,迅速なアクセス,빠른 접근
 QuickAccess.warn.newBlender1,Potentially unsupported Blender version detected!
 QuickAccess.warn.newBlender2,Some features might not work, CATS currently 
-QuickAccess.warn.newBlender3,supports up to Blender 4.1 see github for the 4.1 one.
+QuickAccess.warn.newBlender3,supports up to Blender 4.0 see github for the 4.0 one.
 QuickAccess.warn.oldBlender1,Old Blender version detected!,古いブレンダーバージョンが検出されました!,이전 블렌더 버전이 발견되었습니다!
 QuickAccess.warn.oldBlender2,Some features might not work!,一部の機能は動作しない可能性があります!,일부 기능이 작동하지 않을 수 있습니다!
 QuickAccess.warn.oldBlender3,Please update to Blender 3.6!,ブレンダー3.1以上にアップデートしてください!,블렌더 3.1 버전으로 업데이트하세요!
@@ -200,8 +200,8 @@ Rigidbody コレクションが削除されないと問題が発生する可能�
 MMD の理由でリジッド ボディを維持する必要がある場合にのみオフにします。","버튼을 사용할 때마다 장면에서 모든 강체 및 관절을 제거합니다.
 이는 Rigidbodies 컬렉션이 제거되지 않은 것처럼 기본적으로 켜져 있으며 문제가 발생할 수 있습니다.
 MMD 이유로 인해 강체를 유지해야 하는 경우에만 끄십시오."
-FixLegacy.info1,Blender 4.1 Cats has issues due to MMD Tools Not being.,Blender 4.1 Cats は MMD Tools が原因で問題が発生します。,Blender 4.1 Cats는 MMD Tools의 이유로 문제가 발생합니다.
-FixLegacy.info2,updated most functions will work but you may see errors.,更新された大部分の機能は動作しますが、エラーが表示される可能性があります。,업데이트된 대부분의 기능은 작동하지만 오류가 표시될 수 있습니다.
+FixLegacy.info1,Fix Model Button has been removed.,「モデルを修正」ボタンが削除されました。,모델 수정 버튼이 제거되었습니다.
+FixLegacy.info2,please see mmd options for alternatives.,代替案については mmd オプションを参照してください。,대안은 mmd 옵션을 참조하세요.
 LegacyStuff.label,Legacy Features,レガシーなもの,레거시 물건
 LegacyStuff.info1,End of Life features,この領域はサポート終了機能に関するものです,이 영역은 단종 기능을 위한 것입니다.
 LegacyStuff.info2,Might be removed in the future,これらの機能は将来のアップデートで削除される可能性があります,이러한 기능은 향후 업데이트에서 제거될 수 있습니다.
@@ -214,6 +214,7 @@ MMDOptions.info5,these on models already set up for Unity,これらはすでに 
 MMDOptions.info6,and VRChat or it may break your model.,VRChat を使用しないと、モデルが壊れる可能性があります。,VRChat을 사용하지 않으면 모델이 손상될 수 있습니다.
 MMDOptions.FixMaterialinfo1,This will apply some vrchat fixes,これにより、いくつかの vrchat 修正が適用されます,이것은 일부 vrchat 수정 사항을 적용합니다.
 MMDOptions.FixMaterialinfo2,to materials,材料に,재료에.
+OtherOptionsPanel.fbtFix1,Not needed for vrchat anymore!,VRChat では不要になったので、不要です！,VRChat에서 더 이상 필요하지 않습니다!
 OptimizePanel.label,Optimization,最適化,최적화
 OptimizePanel.atlasDesc,A greatly improved Atlas Generator.,アトラスジェネレータを大幅に改良。,텍스처들을 결합시켜주는 더욱 향상된 아틀라스 생성기입니다.
 OptimizePanel.atlasAuthor,Made by Shotariya,shotaryiaによって作られた,제작자: Shotariya
@@ -432,6 +433,29 @@ FixVRMShapesButton.label,Fix Koikatsu Shapekeys,コイカツシェイプキー�
 FixVRMShapesButton.desc,Fixes the shapekeys of Koikatsu models,,
 FixVRMShapesButton.warn.notDetected,No shapekeys detected!,,
 FixVRMShapesButton.success,Fixed VRM shapekeys.,,
+FixFBTButton.label,Fix Full Body Tracking,全身追跡を修正,풀바디 트래킹 적용
+FixFBTButton.desc,"WARNING: This fix is no longer needed for vrchat, 
+you shouldn't use it unless you know what you are doing!
+
+Applies a general fix for Full Body Tracking.
+Ignore the ""Spine length zero"" warning in Unity",,
+FixFBTButton.error.bonesNotFound,"Required bones could not be found!
+Please make sure that your armature contains the following bones:
+ - Hips, Spine, Left leg, Right leg
+Exact names are required!",,
+FixFBTButton.error.alreadyApplied,Full Body Tracking Fix already applied!,,
+FixFBTButton.success,Successfully applied the Full Body Tracking fix.,,
+RemoveFBTButton.label,Remove Full Body Tracking Fix,全身追跡の修正を削除,풀바디 트래킹 적용 제거
+RemoveFBTButton.desc,"Removes the fix for Full Body Tracking, since it is no longer advised to use it.
+
+Requires bones:
+ - Hips, Spine, Left leg, Right leg, Left leg 2, Right leg 2",,
+RemoveFBTButton.error.bonesNotFound,"Required bones could not be found!
+Please make sure that your armature contains the following bones:
+ - Hips, Spine, Left leg, Right leg, Left leg 2, Right leg 2
+Exact names are required!",,
+RemoveFBTButton.error.notApplied,The Full Body Tracking Fix is not applied!,,
+RemoveFBTButton.success,Successfully removed the Full Body Tracking fix.,,
 DuplicateBonesButton.label,Duplicate Bones,ボーンの複製,본 복사
 DuplicateBonesButton.desc,Duplicates the selected bones including their weight and renames them to _L and _R,,
 DuplicateBonesButton.success,Successfully duplicated {number} bones.,,
@@ -527,9 +551,24 @@ This means that this shape key is no longer decimation safe!",,
 RemoveMeshButton.label,Remove Mesh,,
 RemoveMeshButton.desc,"Removes the selected mesh from the whitelist.
 This means that this mesh will be decimated.",,
+AutoDecimateCatsButton.label,Quick Decimation,,버텍스 줄이기(Decimation)
+AutoDecimateCatsButton.desc,"This will automatically decimate your model while preserving the shape keys.
+You should manually remove unimportant meshes first.",,
+AutoDecimateCatsButton.error.noMesh,No meshes found!,,메쉬가 발견되지 않음!
+decimate.cantDecimateWithSettings,This model can not be decimated to {number} tris with the specified settings.,,
+decimate.safeTryOptions,"Try to use Custom, Half or Full Decimation.",,
+decimate.halfTryOptions,Try to use Custom or Full Decimation.,,
+decimate.customTryOptions,Select fewer shape keys and/or meshes or use Full Decimation.,,
+decimate.disableFingersOrIncrease,Disable 'Save Fingers' or increase the Tris Count.,,
+decimate.disableFingers,or disable 'Save Fingers'.,,
+decimate.noDecimationNeeded,The model already has less than {number} tris. Nothing had to be decimated.,,
+decimate.cantDecimate1,The model could not be decimated to {number} tris.,,
+decimate.cantDecimate2,It got decimated as much as possible within the limits.,,
 ImportAnyModel.label,Import Any Model,任意のモデルをインポート,아무 모델 불러오기
 ImportAnyModel.importantInfo.label,IMPORTANT INFO (hover here),重要な情報(ここにホバー),
 ImportAnyModel.importantInfo.desc,"If you want to modify the import settings, use the button next to the Import button.
+
+",,
 ImportAnyModel.error.emptyZip,The selected zip file contains no importable models.,,
 ImportAnyModel.desc2.8,"Import a model of any supported type.
 
@@ -541,6 +580,19 @@ Supported types:
 - FBX: .fbx
 - DAE: .dae 
 - ZIP: .zip",,
+DecimationLegacy.info1,Decimation will be removed in,デシメーションは次の期間に削除されます,다음 기간에 Decimation이 제거됩니다.
+DecimationLegacy.info2,Blender 3.1 please use Tuxdo,Blender 3.1 では Tuxdo を使用してください,블렌더 3.1은 Tuxdo를 사용하세요
+DecimationLegacy.info3,Blender Plugin instead!,代わりに Blender プラグインを使用してください。,대신 블렌더 플러그인을 사용하세요!
+DecimationMoved1.info1,Decimation has been moved to,,
+DecimationMoved1.info2,to legacy features please start,,
+DecimationMoved1.info3,using tuxedo instead as this is,,
+DecimationMoved1.info4,an obslolete system in cats,,
+LegacyDecimationButton.label,Get Tuxedo!,タキシードをゲット！,턱시도 획득!
+LegacyDecimationButton.URL,https://github.com/feilen/tuxedo-blender-plugin/releases,,
+DecimationHelpButton.success,Opened Github,,
+DecimationHelpButton.label,Decimation Wiki,デシメーション Wiki,데시메이션 위키
+DecimationHelpButton.URL,https://github.com/Yusarina/Cats-Blender-Plugin-Unofficial-/wiki/Decimation,,
+DecimationHelpButton.success,Opened Wiki,,
 ImportAnyModel.error.unsupportedFBX,"The FBX file version is unsupported!
 Please use a tool such as the ""Autodesk FBX Converter"" to make it compatible.",,
 ZipPopup.label,Zip Model Selection:,圧縮モデルの選択:,Zip 모델 선택:
@@ -579,7 +631,7 @@ SourceToolsButton.success,Source Tools link opened,,
 VrmToolsButton.label,Download VRM Importer,VRMインポーターをダウンロード,VRM Importer 다운로드
 VrmToolsButton.URL_2.8,https://github.com/saturday06/VRM_IMPORTER_for_Blender2_8,,
 VrmToolsButton.success,VRM Importer link opened,,
-ExportModel.label,Export Model,モデルのエクスポート,모델 내보내기
+ExportModel.label,FBX for Unity,Unity用FBX,Unity용 FBX
 ExportModel.desc,"Export this model as .fbx for Unity.
 
 Automatically sets the optimal export settings",,
@@ -921,8 +973,99 @@ Uncheck this if bones or vertex groups that you want to keep got deleted",,
 Scene.merge_armatures_cleanup_shape_keys.label,Cleanup Shape Keys,
 Scene.merge_armatures_cleanup_shape_keys.desc,"Cleans up the meshes shape keys.
 Uncheck this if shape keys you want to keep got deleted",,
+Scene.decimation_mode.label,Decimation Mode,単純化モード,
+Scene.decimation_mode.desc,Decimation Mode,,
+Scene.decimation_mode.safe.label,Safe,安全,안전
+Scene.decimation_mode.safe.desc,"Decent results - no shape key loss
+
+This will only decimate meshes with no shape keys.
+The results are decent and you won't lose any shape keys.
+Eye Tracking and Lip Syncing will be fully preserved.",,"괜찮은 결과 - 쉐이프키 손실 없음
+
+This will only decimate meshes with no shape keys.
+The results are decent and you won't lose any shape keys.
+Eye Tracking and Lip Syncing will be fully preserved."
+Scene.decimation_mode.half.label,Half,ハーフ,반
+Scene.decimation_mode.half.desc,"Good results - minimal shape key loss
+
+This will only decimate meshes with less than 4 shape keys as those are often not used.
+The results are better but you will lose the shape keys in some meshes.
+Eye Tracking and Lip Syncing should still work.",,"나쁘지 않은 결과, - 최소한의 쉐이프키 손실됨
+
+This will only decimate meshes with less than 4 shape keys as those are often not used.
+The results are better but you will lose the shape keys in some meshes.
+Eye Tracking and Lip Syncing should still work."
+Scene.decimation_mode.full.label,Full,フル,전체
+Scene.decimation_mode.full.desc,"Consistent results - full shape key loss
+
+This will decimate your whole model deleting all shape keys in the process.
+This will give consistent results but you will lose the ability to add blinking and Lip Syncing.
+Eye Tracking will still work if you disable Eye Blinking.",,"일관된 결과 - 모든 쉐이프키들이 손실됨
+
+This will decimate your whole model deleting all shape keys in the process.
+This will give consistent results but you will lose the ability to add blinking and Lip Syncing.
+Eye Tracking will still work if you disable Eye Blinking."
+Scene.decimation_mode.custom.label,Custom,カスタム,커스텀
+Scene.decimation_mode.custom.desc,"Custom results - custom shape key loss
+
+This will let you choose which meshes and shape keys should not be decimated.
+",,"커스텀 결과 - 커스텀 쉐이프키 손실
+
+This will let you choose which meshes and shape keys should not be decimated.
+"
 Scene.selection_mode.label,Selection Mode,選択モード,선택 모드
 Scene.selection_mode.desc,Selection Mode,,
+Scene.selection_mode.shapekeys.label,Shape Keys,シェイプキー,쉐이프키
+Scene.selection_mode.shapekeys.desc,Select all the shape keys you want to preserve here.,,
+Scene.selection_mode.meshes.label,Meshes,メッシュ,메쉬
+Scene.selection_mode.meshes.desc,Select all the meshes you don't want to decimate here.,,
+Scene.add_shape_key.label,Shape,形状,쉐이프키
+Scene.add_shape_key.desc,The shape key you want to keep,,
+Scene.add_mesh.label,Mesh,メッシュ,메쉬
+Scene.add_mesh.desc,The mesh you want to leave untouched by the decimation,,
+Scene.decimate_fingers.label,Save Fingers,指を救う,손가락 유지
+Scene.decimate_fingers.desc,"Check this if you don't want to decimate your fingers!
+Results will be worse but there will be no issues with finger movement.
+This is probably only useful if you have a VR headset.
+
+This operation requires the finger bones to be named specifically:
+Thumb(0-2)_(L/R)
+IndexFinger(1-3)_(L/R)
+MiddleFinger(1-3)_(L/R)
+RingFinger(1-3)_(L/R)
+LittleFinger(1-3)_(L/R)",,"손가락의 버텍스를 줄여 망치고 싶지 않다면 이것을 체크하세요!
+결과는 더 나빠질 수 있지만 손의 움직임에는 문제가 없습니다.
+아마 VR을 사용하는 경우에만 유용 할 것입니다.
+
+이 작업을 수행하려면 손가락과 손 뼈의 이름을 구체적으로 지정해야합니다.
+Left/Right wrist
+Thumb(0-2)_(L/R)
+IndexFinger(1-3)_(L/R)
+MiddleFinger(1-3)_(L/R)
+RingFinger(1-3)_(L/R)
+LittleFinger(1-3)_(L/R)"
+Scene.decimate_hands.label,Save Hands,手を救う,손 유지
+Scene.decimate_hands.desc,"Check this if you don't want to decimate your full hands!
+Results will be worse but there will be no issues with hand movement.
+This is probably only useful if you have a VR headset.
+
+This operation requires the finger and hand bones to be named specifically:
+Left/Right wrist
+Thumb(0-2)_(L/R)
+IndexFinger(1-3)_(L/R)
+MiddleFinger(1-3)_(L/R)
+RingFinger(1-3)_(L/R)
+LittleFinger(1-3)_(L/R)",,"손의 버텍스를 줄여 망치고 싶지 않다면 이것을 체크하세요!
+결과는 더 나빠질 수 있지만 손의 움직임에는 문제가 없습니다.
+아마 VR을 사용하는 경우에만 유용 할 것입니다.
+
+이 작업을 수행하려면 손가락과 손 뼈의 이름을 구체적으로 지정해야합니다.
+Left/Right wrist
+Thumb(0-2)_(L/R)
+IndexFinger(1-3)_(L/R)
+MiddleFinger(1-3)_(L/R)
+RingFinger(1-3)_(L/R)
+LittleFinger(1-3)_(L/R)"
 Scene.decimation_remove_doubles.label,Remove Doubles,重複を削除,이중 제거
 Scene.decimation_remove_doubles.desc,Uncheck this if you get issues with this checked,Uncheck this if you got issues with with this checked,문제가 될 시 체크를 해제하세요
 Scene.decimation_retain_separated_meshes.label,Retain Separated Meshes,,
@@ -972,6 +1115,8 @@ Scene.ui_lang.label,Cats Language,,
 Scene.ui_lang.desc,Lets you select which language the Cats interface should have,,
 Scene.use_custom_mmd_tools.label,Use Custom mmd_tools,カスタムmmd_toolsを使用する,커스텀 mmd_tools 사용
 Scene.use_custom_mmd_tools.desc,Enable this to use your own version of mmd_tools. This will disable the internal cats mmd_tools,,
+Scene.debug_translations.label,Debug Google Translations,Google翻訳をデバッグ,Google 번역 디버그
+Scene.debug_translations.desc,Tests the Google Translations and prints the Google response in case of error,,
 Scene.shapekeycsv.label,Export Translations To CSV,シェイプキー翻訳CSVをエクスポート,쉐이프키 번역 CSV 내보내기
 Scene.customfoldershapekeycsv.label,Custom CSV Export Location,シェイプキー翻訳CSVのエクスポート先をカスタマイズ,쉐이프키 번역
 Scene.customfoldershapekeycsv.desc,Choose your own location to export for the shape keys CSV to be.,シェイプ キーの CSV をエクスポートする独自の場所を選択します。,선택한 위치에 쉐이프 키 CSV를 내보냅니다.
@@ -1032,7 +1177,8 @@ draw_updater_panel.UpdateToSelectedButton.label,Install version:,インストー
 draw_updater_panel.UpdateToDevButton.label,Install Development Version,開発バージョンのインストール,개발버전 설치
 draw_updater_panel.currentVersion,Current version: {name},,현재 버전: {name}
 bpy.types.Scene.cats_updater_version_list.label,Version,バージョン,버전
-bpy.types.Scene.cats_updater_version_list.desc,"Select the version you want to install",,
+bpy.types.Scene.cats_updater_version_list.desc,"Select the version you want to install
+",,
 bpy.types.Scene.cats_update_action.label,Choose action,アクションを選択,액션 선택
 bpy.types.Scene.cats_update_action.desc,Action,,
 bpy.types.Scene.cats_update_action.update.label,Update Now,今すぐアップデート,지금 업데이트
@@ -1057,3 +1203,7 @@ RemoveRigidbodiesJointsOperator.description,"Rigidbodies and joints are used by 
 They are completely useless for VRChat, so removing them is recommended for VRChat users!","剛体とジョイントはMMDソフトウェアによって物理シミュレーションを行います。
 VRChatでは彼らが役に立ちません。VRChatユーザーのためにこれらを削除することをお勧めします！","Rigidbodies와 joints는 MMD software에서 물리연산을 위해 사용되는 것들입니다.
 VRChat에 사용되지않으므로 VRChat 유저들에게는 이것들을 지우는 게 좋습니다!"
+Importer.export_resonite.label,"Resonite","Resoniteにエクスポート","Resonite에 내보내기"
+Importer.export_resonite.desc,"Export to Resonite as a GLTF. Make sure your model is to scale in blender, and import as meters in Resonite.","ResoniteにGLTFとしてエクスポートします。Blenderでモデルをスケールしてから、Resoniteでメートルでインポートしてください。","Resonite에 GLTF로 내보내기. Blender에서 모델을 스케일링 하고, Resonite에서 메터로 인포트하세요."
+ExporterModelsPopup.label,Export Models,モデルをエクスポート,모델 내보내기
+ExporterModelsPopup.desc,Export models to a selected format,選択したフォーマットにモデルをエクスポート,모델을 선택한 포맷으로 내보내기

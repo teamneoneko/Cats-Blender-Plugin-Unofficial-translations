@@ -168,7 +168,7 @@
         "CreditsPanel.desc4": "Special thanks to:",
         "CreditsPanel.descContributors": "Feilen, Jordo, Ruubick, 989onan, triazo, Mysteryem",
         "CreditsPanel.descContributors2": "Shotariya and Neitri",
-        "CreditsPanel.desc5": "Unoffical Maintainer - Yusarina",
+        "CreditsPanel.desc5": "Unoffical Maintainer - Yusarina and 989onan",
         "CreditsPanel.desc6": "Do you need help or found a bug?",
         "FixArmature.label": "Fix MMD Model",
         "FixArmature.desc": "WARNING: DO NOT USE THIS UNLESS YOU ARE\nIMPORTING A NEW MMD MODEL, DO NOT USE \nTHIS FOR MODELS ALREADY SET UP FOR \nUNITY AND VRCHAT!\n\nAutomatically:\n- Reparents bones\n- Removes unnecessary bones, objects, groups & constraints\n- Translates and renames bones & objects\n- Merges weight paints\n- Corrects the hips\n- Converts morphs into shapes",
